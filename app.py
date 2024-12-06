@@ -16,15 +16,6 @@ hdr = {'User-Agent': 'Mozilla/5.0'}
 
 # Function to fetch movie poster
 def movie_poster_fetcher(imdb_link):
-    # url_data = requests.get(imdb_link, headers=hdr).text
-    # s_data = BeautifulSoup(url_data, 'html.parser')
-    # imdb_dp = s_data.find("meta", property="og:image")
-    # movie_poster_link = imdb_dp.attrs['content']
-    # u = urlopen(movie_poster_link)
-    # raw_data = u.read()
-    # image = PIL.Image.open(io.BytesIO(raw_data))
-    # image = image.resize((150, 300), )
-    # return image
     url_data = requests.get(imdb_link, headers=hdr).text
     s_data = BeautifulSoup(url_data, 'html.parser')
     imdb_dp = s_data.find("meta", property="og:image")
